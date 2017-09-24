@@ -1,0 +1,15 @@
+{
+  "name": "loader",
+  "version": "1.0.0",
+  "description": "Demo for loading mockserver expectations statically",
+  "main": "index.js",
+  "scripts": {
+    "load": "node index.js"
+  },
+  "author": "Jim Kirkbide (@jameskbride)",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^7.1.2",
+    "mockserver-client": "1.0.16"
+  }
+}

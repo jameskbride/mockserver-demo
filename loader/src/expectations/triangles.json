@@ -1,0 +1,43 @@
+{
+  "method": "GET",
+  "path": "/encounters/_search",
+  "statusCode": 200,
+  "queryStringParameters": [
+      {
+          "name": "q",
+          "values": [ "(Triangle|triangle)" ]
+      }
+  ],
+  "body": {
+    "hits": {
+      "hits": [
+        {
+          "_source": {
+            "url": "http://nuforc.org/webreports/132/S132660.html",
+            "date_time": "2/15/17 20:00",
+            "city": "Austin",
+            "state": "NV",
+            "shape": "Triangle",
+            "duration": "3 minutes",
+            "summary": "We saw a bright light in the southern sky.  Instantly, it changed to a triangle with 2 lights in each corner.",
+            "posted_date": "2/17/17",
+            "description": "We where driving down from Mount Callahan 20 mi N of Austin, NV, at 8pm.  First we saw a bright light in the southern sky.  Instantly, it changed to a triangle with 2 lights in each corner.  It was about 2000 yards away.  We stopped the truck &amp; got out to watch.  It kind of rotated around for about 30 seconds and in an instant, it changed to a much larger rectangle with about 30 lights around the parameter of it.  It was silent and remained completely still for a minute.It then just disappeared, and several seconds later a loud rushing air sound was above us for 10 to 15 seconds.  We could not see anything above us but the stars.  Then the sound seemed to travel away until we could not hear it any more.((ADDENDUM FROM WITNESS))Hi Peter,Yes,  it was last night.  I made a typo entering the data.  We were coming down from the mountain top after repairing a cellular site.  ((name deleted))((END ADDENDUM))"
+          }
+        },
+        {
+          "_source": {
+            "url": "http://nuforc.org/webreports/133/S133150.html",
+            "date_time": "3/16/17 19:35",
+            "city": "Chandler",
+            "state": "AZ",
+            "shape": "Triangle",
+            "duration": "1 minute",
+            "summary": "3 bright red lights in triangular formation.",
+            "posted_date": "3/17/17",
+            "description": "3 Bright Red Lights in Triangular FormationI saw 3 bright red lights flying in a triangular formation very low to the ground and in complete silence.  The objects were very low to the ground and heading west over Chandler.  The red objects would move closer to one another and then further apart while maintaining a triangular pattern varying from equilateral, to iscoseles, to scalene, in nature.  The frequency at which these lights were blinking were mutually exclusive.  They all seemed to make up part of a whole, but they were emanating light on their own accord with complete autonomy. I immediately ruled out radar on a commercial aircraft because of the nature of the blinking of these objects.  After a minute, they disappeared out of my line of vision.  Shortly after, 2 helicopters appeared to give chase to whatever this thing was."
+          }
+        }
+      ]
+    }
+  }
+}
