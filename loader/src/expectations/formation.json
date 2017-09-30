@@ -12,6 +12,10 @@
     "hits": {
       "hits": [
         {
+          "_index": "encounters",
+          "_type": "encounter",
+          "_id": "AV1stsDs5J77fbpnTxoF",
+          "_score": 0.41456264,
           "_source": {
             "url": "http://nuforc.org/webreports/134/S134763.html",
             "date_time": "6/26/17 01:55",
