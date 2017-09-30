@@ -5,7 +5,7 @@
   "queryStringParameters": [
       {
           "name": "q",
-          "values": [ "(Triangle|triangle)" ]
+          "values": [ "(Triangle|triangle)(s*)" ]
       }
   ],
   "body": {
