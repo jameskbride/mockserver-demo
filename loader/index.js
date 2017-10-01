@@ -25,6 +25,10 @@ let buildExpectation = (jsonExpectation) => {
                 {
                     "name": "Content-Type",
                     "values": ["application/json; charset=utf-8"]
+                },
+                {
+                    "name": "Access-Control-Allow-Origin",
+                    "values": ["*"]
                 }
             ]
         },
