@@ -1,0 +1,80 @@
+{
+  "method": "POST",
+  "path": "/encounters/_search",
+  "statusCode": 200,
+  "requestBody": {
+    "type": "JSON_SCHEMA",
+    "value": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "object",
+          "properties": {
+            "match": {
+              "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string",
+                    "pattern": ".+"
+                  }
+                }
+            }
+          }
+        },
+        "aggs": {
+          "type": "object",
+          "properties": {
+            "shapes": {
+              "type": "object",
+              "properties": {
+                "terms": {
+                  "type": "object",
+                  "properties": {
+                    "field": {
+                      "type": "string",
+                      "pattern": "shape"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "body": {
+    "took": 8,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 29,
+      "max_score": 0,
+      "hits": []
+    },
+    "aggregations": {
+      "shapes": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 6,
+        "buckets": [
+          {
+            "key": "triangle",
+            "doc_count": 197
+          },
+          {
+            "key": "fireball",
+            "doc_count": 168
+          },
+          {
+            "key": "formation",
+            "doc_count": 107
+          }
+        ]
+      }
+    }
+  }
+}
