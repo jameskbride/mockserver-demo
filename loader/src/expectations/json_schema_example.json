@@ -1,15 +1,59 @@
 {
-  "method": "GET",
+  "method": "POST",
   "path": "/encounters/_search",
   "statusCode": 200,
-  "queryStringParameters": [
-      {
-          "name": "q",
-          "values": [ "(Triangle|triangle)(s*)" ]
+  "requestBody": {
+    "type": "JSON_SCHEMA",
+    "value": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "object",
+          "properties": {
+            "match": {
+              "type": "object",
+              "properties": {
+                "description": {
+                  "type": "string",
+                  "pattern": "Mount Callahan"
+                }
+              }
+            }
+          }
+        },
+        "aggs": {
+          "type": "object",
+          "properties": {
+            "shapes": {
+              "type": "object",
+              "properties": {
+                "terms": {
+                  "type": "object",
+                  "properties": {
+                    "field": {
+                      "type": "string",
+                      "pattern": "shape"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
-  ],
+    }
+  },
   "body": {
+    "took": 8,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
     "hits": {
+      "total": 29,
+      "max_score": 0,
       "hits": [
         {
           "_index": "encounters",
@@ -46,6 +90,18 @@
           }
         }
       ]
+    },
+    "aggregations": {
+      "shapes": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 6,
+        "buckets": [
+          {
+            "key": "triangle",
+            "doc_count": 2
+          }
+        ]
+      }
     }
   }
 }

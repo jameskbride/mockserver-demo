@@ -38,11 +38,22 @@ let buildExpectation = (jsonExpectation) => {
     }
 
     if (jsonExpectation.requestBody) {
-        preProcessedExpectation.httpRequest.body = {
-            type: "JSON_SCHEMA",
-            jsonSchema: JSON.stringify(jsonExpectation.requestBody.value)
+        if (jsonExpectation.requestBody.type === 'JSON_SCHEMA') {
+            preProcessedExpectation.httpRequest.body = {
+                type: 'JSON_SCHEMA',
+                jsonSchema: JSON.stringify(jsonExpectation.requestBody.value)
+            }
+        }
+
+        if (jsonExpectation.requestBody.type === 'JSON') {
+            preProcessedExpectation.httpRequest.body = {
+                type: 'JSON',
+                matchType: jsonExpectation.requestBody.matchType,
+                json: JSON.stringify(jsonExpectation.requestBody.json)
+            }
         }
     }
+
 
     return preProcessedExpectation;
 };

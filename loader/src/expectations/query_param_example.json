@@ -3,10 +3,10 @@
   "path": "/encounters/_search",
   "statusCode": 200,
   "queryStringParameters": [
-      {
-          "name": "q",
-          "values": [ "orbs" ]
-      }
+    {
+      "name": "q",
+      "values": [ "orbs" ]
+    }
   ],
   "body": {
     "hits": {

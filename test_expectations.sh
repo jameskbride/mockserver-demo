@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-printf "\n\nAggregations...\n\n"
+printf "\n\nSearching for by query parameters\n\n"
+
+curl -X GET \
+  'http://localhost:9200/encounters/_search?q=orbs' \
+  -H 'content-type: application/json'
+
+printf "\n\nSearching for by json schema match\n\n"
 
 curl -X POST \
   http://localhost:9200/encounters/_search \
@@ -8,7 +14,7 @@ curl -X POST \
   -d '{
     "query": {
     	"match": {
-    		"description": "green"
+    		"description": "Mount Callahan"
     	}
     },
     "aggs" : {
@@ -20,25 +26,27 @@ curl -X POST \
     }
 }'
 
-printf "\n\nSearching for orbs\n\n"
+printf "\n\nSearching for by json match\n\n"
 
-curl -X GET \
-  'http://localhost:9200/encounters/_search?q=orbs' \
-  -H 'content-type: application/json'
+curl -X POST \
+  http://localhost:9200/encounters/_search \
+  -H 'content-type: application/json' \
+  -d '{
+    "query": {
+    	"match": {
+    		"description": "Fireball"
+    	}
+    },
+    "aggs" : {
+        "shapes" : {
+            "terms" : {
+              "field" : "shape"
+            }
+        }
+    }
+}'
 
-printf "\n\nSearching for formations\n\n"
-
-curl -X GET \
-'http://localhost:9200/encounters/_search?q=formation' \
--H 'content-type: application/json'
-
-printf "\n\nSearching for triangles\n\n"
-
-curl -X GET \
-'http://localhost:9200/encounters/_search?q=triangle' \
--H 'content-type: application/json'
-
-printf "\n\nSearching for single record\n\n"
+printf "\n\nSearching for url path match\n\n"
 
 curl -X GET \
   http://localhost:9200/encounters/encounter/AV1stsDO5J77fbpnTxoE \
