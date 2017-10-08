@@ -13,6 +13,14 @@ let loadExpectation = (rawExpectation) => {
 };
 
 let buildExpectation = (jsonExpectation) => {
+    let preProcessedExpectation = buildPreprocessedExpectation(jsonExpectation);
+    addQueryParameters(jsonExpectation, preProcessedExpectation);
+    addBody(jsonExpectation, preProcessedExpectation);
+
+    return preProcessedExpectation;
+};
+
+let buildPreprocessedExpectation = function (jsonExpectation) {
     let preProcessedExpectation = {
         'httpRequest': {
             'method': jsonExpectation.method,
@@ -36,11 +44,17 @@ let buildExpectation = (jsonExpectation) => {
             'unlimited': true
         }
     };
+    return preProcessedExpectation;
+};
 
+
+let addQueryParameters = function (jsonExpectation, preProcessedExpectation) {
     if (jsonExpectation.queryStringParameters) {
-        preProcessedExpectation.httpRequest.queryStringParameters =  jsonExpectation.queryStringParameters;
+        preProcessedExpectation.httpRequest.queryStringParameters = jsonExpectation.queryStringParameters;
     }
+};
 
+let addBody = function (jsonExpectation, preProcessedExpectation) {
     if (jsonExpectation.requestBody) {
         if (jsonExpectation.requestBody.type === 'JSON_SCHEMA') {
             preProcessedExpectation.httpRequest.body = {
@@ -57,9 +71,6 @@ let buildExpectation = (jsonExpectation) => {
             }
         }
     }
-
-
-    return preProcessedExpectation;
 };
 
 jsonFiles.forEach(expectation => loadExpectation(expectation));
