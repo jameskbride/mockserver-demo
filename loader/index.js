@@ -3,13 +3,13 @@ const glob = require('glob');
 const fs = require('fs');
 const path = require('path');
 
-let mockServerClient = mockServer.mockServerClient;
+let mockServerClient = mockServer.mockServerClient("localhost", 9200);
 const jsonFiles = glob.sync(path.resolve(__dirname, './src/expectations/') + '/*.json');
 
 let loadExpectation = (rawExpectation) => {
     const jsonExpectation = JSON.parse(fs.readFileSync(rawExpectation));
     let processedExpectation = buildExpectation(jsonExpectation);
-    mockServerClient("localhost", 9200).mockAnyResponse(processedExpectation);
+    mockServerClient.mockAnyResponse(processedExpectation);
 };
 
 let buildExpectation = (jsonExpectation) => {
@@ -73,4 +73,5 @@ let addBody = function (jsonExpectation, preProcessedExpectation) {
     }
 };
 
+mockServerClient.reset();
 jsonFiles.forEach(expectation => loadExpectation(expectation));

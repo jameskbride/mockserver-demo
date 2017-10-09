@@ -1,0 +1,52 @@
+{
+  "method": "POST",
+  "path": "/report",
+  "statusCode": 200,
+  "requestBody": {
+    "type": "JSON_SCHEMA",
+    "value": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "id": "/properties/city",
+          "type": "string",
+          "pattern": ".+"
+        },
+        "dateTime": {
+          "id": "/properties/dateTime",
+          "type": "string",
+          "pattern": ".+"
+        },
+        "description": {
+          "id": "/properties/description",
+          "type": "string",
+          "pattern": ".+"
+        },
+        "duration": {
+          "id": "/properties/duration",
+          "type": "string",
+          "pattern": ".+"
+        },
+        "shape": {
+          "id": "/properties/shape",
+          "type": "string",
+          "pattern": ".+"
+        },
+        "state": {
+          "id": "/properties/state",
+          "type": "string",
+          "pattern": ".+"
+        },
+        "summary": {
+          "id": "/properties/summary",
+          "type": "string",
+          "pattern": ".+"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "body": {
+
+  }
+}
