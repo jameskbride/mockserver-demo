@@ -1,0 +1,23 @@
+{
+  "method": "GET",
+  "path": "/encounters/encounter/AV1stvwh5J77fbpnTxy6",
+  "statusCode": 200,
+  "body": {
+    "_index": "encounters",
+    "_type": "encounter",
+    "_id": "AV1stvwh5J77fbpnTxy6",
+    "_version": 1,
+    "found": true,
+    "_source": {
+      "url": "http://nuforc.org/webreports/133/S133150.html",
+      "date_time": "3/16/17 19:35",
+      "city": "Chandler",
+      "state": "AZ",
+      "shape": "Triangle",
+      "duration": "1 minute",
+      "summary": "3 bright red lights in triangular formation.",
+      "posted_date": "3/17/17",
+      "description": "3 Bright Red Lights in Triangular FormationI saw 3 bright red lights flying in a triangular formation very low to the ground and in complete silence.  The objects were very low to the ground and heading west over Chandler.  The red objects would move closer to one another and then further apart while maintaining a triangular pattern varying from equilateral, to iscoseles, to scalene, in nature.  The frequency at which these lights were blinking were mutually exclusive.  They all seemed to make up part of a whole, but they were emanating light on their own accord with complete autonomy. I immediately ruled out radar on a commercial aircraft because of the nature of the blinking of these objects.  After a minute, they disappeared out of my line of vision.  Shortly after, 2 helicopters appeared to give chase to whatever this thing was."
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "method": "GET",
+  "path": "/encounters/encounter/AV1stsC55J77fbpnTxoD",
+  "statusCode": 200,
+  "body": {
+    "_index": "encounters",
+    "_type": "encounter",
+    "_id": "AV1stsC55J77fbpnTxoD",
+    "_version": 1,
+    "found": true,
+    "_source": {
+      "url": "http://nuforc.org/webreports/132/S132237.html",
+      "date_time": "1/19/17 18:05",
+      "city": "Lincoln",
+      "state": "NM",
+      "shape": "Fireball",
+      "duration": "5 minutes",
+      "summary": "500 orbs being chased by a jet.  ((NUFORC Note:  We would welcome additional reports.  PD))",
+      "posted_date": "1/26/17",
+      "description": "500 orbs being chased by a jet.Around 18:00, I and another were sitting inside, and started to hear the sound of possible two jet plans.  As the noise grew louder so did our suspision and we proceeded outside.  As we looked up we were unable to see any jets in the sky as they sounded directly above us.  Looking towards the south-east a glow of several orbs appeard very faint roughly 12.  Over the next few minutes the orbs grew in intensity as more appeared.  Roughly 500-1000 appeared and disappeared as we watched.  There seemed to be no more then 50 at a time.  Movement was slow and looked at first to fall but then recover and fly higher as the light would fade then repeate.  The lights continued but our view was interrupted by the mountain.  My feeling was that the lights were very high in the atmosphere compared to the low flying jet or jets.((NUFORC Note:  We have not spoken yet with the source of this report, but we hope to do so.  Also, we plan to contact the local press in the vicinity of Lincon, NM, to attempt to verify the claims above.  PD))((NUFORC Note:  We finally spoke with the source of the report, and he assured us that it is legitimate.  We would welcome additional reports, in order to corroborate the alleged sighting.  PD))"
+    }
+  }
+}

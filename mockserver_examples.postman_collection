@@ -1,0 +1,142 @@
+{
+	"variables": [],
+	"info": {
+		"name": "MockServer Examples",
+		"_postman_id": "8df561d8-8bb3-795e-d05b-0c85bbef61a4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Path Example",
+			"request": {
+				"url": "http://localhost:9200/encounters/encounter/AV1stsDO5J77fbpnTxoE",
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "JSON Example",
+			"request": {
+				"url": "http://localhost:9200/encounters/_search",
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": {\n    \t\"match\": {\n    \t\t\"description\": \"Fireball\"\n    \t}\n    },\n    \"aggs\" : {\n        \"shapes\" : {\n            \"terms\" : {\n              \"field\" : \"shape\"\n            }\n        }\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "JSON Schema Example",
+			"request": {
+				"url": "http://localhost:9200/encounters/_search",
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": {\n    \t\"match\": {\n    \t\t\"description\": \"Mount Callahan\"\n    \t}\n    },\n    \"aggs\" : {\n        \"shapes\" : {\n            \"terms\" : {\n              \"field\" : \"shape\"\n            }\n        }\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Query Params Example",
+			"request": {
+				"url": {
+					"raw": "http://localhost:9200/encounters/_search?q=orbs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"encounters",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "orbs",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Reset All Expectations",
+			"request": {
+				"url": "http://localhost:9200/reset",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Clear Example",
+			"request": {
+				"url": "http://localhost:9200/clear",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"method\": \"GET\",\n    \"path\": \"/encounters/encounter/AV1stsDO5J77fbpnTxoE\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

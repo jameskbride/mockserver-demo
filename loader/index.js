@@ -9,6 +9,7 @@ const jsonFiles = glob.sync(path.resolve(__dirname, './src/expectations/') + '/*
 let loadExpectation = (rawExpectation) => {
     const jsonExpectation = JSON.parse(fs.readFileSync(rawExpectation));
     let processedExpectation = buildExpectation(jsonExpectation);
+    console.log(processedExpectation);
     mockServerClient.mockAnyResponse(processedExpectation);
 };
 
